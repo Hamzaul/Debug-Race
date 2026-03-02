@@ -21,10 +21,16 @@ router.get('/test', (req, res) => {
 // Create team - NO authentication for MVP
 router.post('/create', (req, res) => {
   try {
-    const { name, language, level } = req.body || {};
+    const { name, language, level, leaderDisplayName, leaderId, leaderAvatar } = req.body || {}; // Added leaderDisplayName, leaderId, leaderAvatar
     
     if (!name) {
-      return res.status(400).json({ error: 'Team name is required' });
+      return res.status(400).json({ error: 'Lobby name is required' });
+    }
+    if (!leaderDisplayName) {
+        return res.status(400).json({ error: 'Leader name is required' });
+    }
+    if (!leaderId) { // Basic check, in real app, userId comes from authenticated session
+        return res.status(400).json({ error: 'Leader user ID is required' });
     }
     
     // Generate unique code
@@ -35,12 +41,19 @@ router.post('/create', (req, res) => {
       attempts++;
     } while (teams.has(code) && attempts < 100);
     
-    const team = {
-      _id: `team_${Date.now()}`,
+    const team = { // 'team' now means 'lobby'
+      _id: `lobby_${Date.now()}`,
       code: code,
-      name: name,
-      leader: 'current_user',
-      members: [],
+      name: name, // Lobby Name
+      leaderId: leaderId, // Global User ID of the leader
+      members: [{ // Initial member is the leader
+        userId: leaderId,
+        username: leaderDisplayName, // Lobby-specific display name
+        avatar: leaderAvatar || 'avatar1', // Store avatar
+        isReady: false,
+        isLeader: true,
+        socketId: null // This will be set on socket connection
+      }],
       settings: {
         language: language || 'Python',
         level: parseInt(level) || 1,
@@ -52,17 +65,17 @@ router.post('/create', (req, res) => {
     
     teams.set(code, team);
     
-    console.log('✅ Team created:', code, '-', name);
+    console.log('✅ Lobby created:', code, '-', name, 'by', leaderDisplayName);
     
     res.status(201).json({
-      team: team,
+      team: team, // Still returning 'team' as per original structure
       levelInfo: {
         name: getLevelName(team.settings.level),
-        laps: team.settings.level + 1
+        laps: team.settings.level + 1 // Example calculation, adjust if needed
       }
     });
   } catch (error) {
-    console.error('❌ Create team error:', error);
+    console.error('❌ Create lobby error:', error);
     res.status(500).json({ error: error.message });
   }
 });
@@ -70,37 +83,41 @@ router.post('/create', (req, res) => {
 // Join team
 router.post('/join', (req, res) => {
   try {
-    const { code } = req.body || {};
-    
+    const { code } = req.body || {}; // Renamed from teamCode
+    // No playerDisplayName or playerAvatar here.
+    // The player's specific display name and avatar for the lobby will be
+    // sent via Socket.io 'joinRoom' event after this API call.
+    // The backend's socket handler will then add the member to the lobby object.
+
     if (!code) {
-      return res.status(400).json({ error: 'Team code is required' });
+      return res.status(400).json({ error: 'Lobby code is required' });
     }
     
     if (!teams.has(code)) {
-      return res.status(404).json({ error: 'Team not found' });
+      return res.status(404).json({ error: 'Lobby not found' });
     }
     
-    const team = teams.get(code);
+    const team = teams.get(code); // 'team' now means 'lobby'
     
     if (team.status !== 'waiting') {
       return res.status(400).json({ error: 'Race already in progress' });
     }
     
     if (team.members.length >= team.settings.maxPlayers) {
-      return res.status(400).json({ error: 'Team is full' });
+      return res.status(400).json({ error: 'Lobby is full' });
     }
     
-    console.log('✅ Player joined team:', code);
+    console.log(`✅ Player is attempting to join lobby: ${code}`);
     
     res.json({
-      team: team,
+      team: team, // Return lobby details
       levelInfo: {
         name: getLevelName(team.settings.level),
         laps: team.settings.level + 1
       }
     });
   } catch (error) {
-    console.error('❌ Join team error:', error);
+    console.error('❌ Join lobby error:', error);
     res.status(500).json({ error: error.message });
   }
 });

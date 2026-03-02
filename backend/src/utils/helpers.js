@@ -1,4 +1,4 @@
-const { SPEED, POWERUPS } = require('./constants');
+const { SPEED, POWERUPS } = require("./constants");
 
 // Calculate new speed based on answer
 const calculateSpeed = (currentSpeed, isCorrect, hasNitro = false) => {

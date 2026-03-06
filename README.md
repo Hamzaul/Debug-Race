@@ -2,44 +2,44 @@
 
 *Decode.Optimize.Accelerate*
 
-##🚀 Project Overview
+## 🚀 Project Overview
 
 DEBUG RACE is a multiplayer competitive coding racing game where players race cars on top-down tracks by solving coding challenges.
 
 Instead of traditional coding competitions, DEBUG RACE turns debugging and problem solving into a real-time racing experience.
 
--✅ Correct answers → Speed Boost
+- ✅ Correct answers → Speed Boost
 
--❌ Wrong answers → Speed Drop
+- ❌ Wrong answers → Speed Drop
 
 The game combines:
 
--Real-time multiplayer racing
+- Real-time multiplayer racing
 
--Coding challenges
+- Coding challenges
 
--AI-powered question generation
+- AI-powered question generation
 
--Esports-style UI/UX
+- Esports-style UI/UX
 
 to create a fast-paced learning environment for programmers.
 
-##🎮 Game Features
-###🏎 Real-Time Multiplayer Racing
+## 🎮 Game Features
+### 🏎 Real-Time Multiplayer Racing
 
 Players compete in live races where coding performance controls car speed.
 
-###🤖 AI Question Engine
+### 🤖 AI Question Engine
 
 Adaptive AI generates coding questions based on player performance.
 
-###🧠 Adaptive Difficulty
+### 🧠 Adaptive Difficulty
 
 Difficulty adjusts dynamically:
 
 Accuracy > 80% → Harder questions
 Accuracy < 50% → Easier questions
-###⚡ Power-Up System
+### ⚡ Power-Up System
 
 Players unlock power-ups through streaks.
 
@@ -47,32 +47,32 @@ Streak	Power-Up
 3 Correct	Nitro Boost
 5 Correct	Shield
 7 Correct	Slow Opponent
-###🏁 Esports Style Interface
+### 🏁 Esports Style Interface
 
 Includes:
 
--Leaderboards
+- Leaderboards
 
--Player avatars
+- Player avatars
 
--Live speed indicators
+- Live speed indicators
 
--Race podium results
+- Race podium results
 
-##🏎 Game Flow
-###1️⃣ Loader Page – Ignition Mode
+## 🏎 Game Flow
+### 1️⃣ Loader Page – Ignition Mode
 
--Dark racing theme
+- Dark racing theme
 
--Animated racetrack loading bar
+- Animated racetrack loading bar
 
--Press ENTER to Ignite Engine
+- Press ENTER to Ignite Engine
 
 Transition:
 
 🔴 🔴 🔴 🔴 🔴
 Lights Out → Race Begins
-###2️⃣ Home Page – Control Center
+### 2️⃣ Home Page – Control Center
 
 Players can:
 
@@ -86,31 +86,31 @@ Creating a team generates a 6-digit team code.
 Example:
 
 Team Code: 482913
-###3️⃣ Lobby – Pre-Race Arena
+### 3️⃣ Lobby – Pre-Race Arena
 
 Lobby shows:
 
--Team Name
+- Team Name
 
--Selected Language
+- Selected Language
 
--Level
+- Level
 
--Player Avatars
+- Player Avatars
 
--Ready Status
+- Ready Status
 
 Leader can start the race once all players are ready.
 
 🏁 START RACE
-###🏆 Level System
+### 🏆 Level System
 Level	Name	Difficulty	Laps
 1	Rookie Grid	Beginner	2
 2	Code Circuit	Easy–Intermediate	3
 3	Logic Grand Prix	Intermediate	4
 4	Algorithm Arena	Advanced	5
 5	Championship Circuit	Expert	6
-##🗺 Track Themes
+## 🗺 Track Themes
 
 Each level has a unique racing track.
 
@@ -120,7 +120,7 @@ Code Circuit	Sharp turns
 Logic GP	Split lane
 Algorithm Arena	Technical curves
 Championship Circuit	Complex grand prix
-##🚗 Car Types
+## 🚗 Car Types
 
 Players can choose different car styles.
 
@@ -128,60 +128,60 @@ Car	Ability
 Speedster	Balanced
 TurboX	High boost
 StablePro	Low penalty
-##🧑‍✈️ Driver Avatars
+## 🧑‍✈️ Driver Avatars
 
 Players select racing avatars such as:
 
--Coder Ninja
+- Coder Ninja
 
--Algorithm Ace
+- Algorithm Ace
 
--Debug Master
+- Debug Master
 
--AI Racer
+- AI Racer
 
--Cyber Mechanic
+- Cyber Mechanic
 
-##💻 Supported Languages
+## 💻 Supported Languages
 C
 Python
 Java
 
 Each team selects one language for the entire race.
 
-##🖥 Race Interface
+## 🖥 Race Interface
 
 The gameplay screen includes:
 
-###Track Area
+### Track Area
 
--Racing cars
+- Racing cars
 
--Player avatars
+- Player avatars
 
--Speed bars
+- Speed bars
 
 Position ranking
 
-###Question Panel
+### Question Panel
 
--Coding question
+- Coding question
 
--Code snippet
+- Code snippet
 
--Options
+- Options
 
--Countdown timer
+- Countdown timer
 
-###Bottom Panel
+### Bottom Panel
 
--Mini leaderboard
+- Mini leaderboard
 
--Lap progress
+- Lap progress
 
--Streak counter
+- Streak counter
 
-##🏁 Race Results
+## 🏁 Race Results
 
 After the race finishes, the podium appears.
 
@@ -191,91 +191,91 @@ After the race finishes, the podium appears.
 
 Statistics displayed:
 
--Accuracy %
+- Accuracy %
 
--Total time
+- Total time
 
--Boost usage
+- Boost usage
 
--Average response time
+- Average response time
 
-##📊 Performance Analysis
+## 📊 Performance Analysis
 
 Players receive post-race insights.
 
-###Mistake Review
+### Mistake Review
 
--Wrong answers
+- Wrong answers
 
--Correct explanation
+- Correct explanation
 
-###Performance Graphs
+### Performance Graphs
 
--Speed vs Time
+- Speed vs Time
 
--Accuracy %
+- Accuracy %
 
--Response time
+- Response time
 
-###Learning Insights
+### Learning Insights
 
 Weak topics detection:
 
--Loops
--Conditions
--Functions
--Data Structures
-##🏗 Tech Stack
-###Frontend
+- Loops
+- Conditions
+- Functions
+- Data Structures
+## 🏗 Tech Stack
+### Frontend
 
--React
+- React
 
--Phaser.js
+- Phaser.js
 
--Tailwind CSS
+- Tailwind CSS
 
--Vite
+- Vite
 
-###Backend
+### Backend
 
--Node.js
+- Node.js
 
--Express.js
+- Express.js
 
--Socket.io
+- Socket.io
 
--MongoDB
+- MongoDB
 
--Mongoose
+- Mongoose
 
-###AI System
+### AI System
 
--OpenAI API
+- OpenAI API
 
--Adaptive Question Generator
+- Adaptive Question Generator
 
 
-##👨‍💻 Contributors
+## 👨‍💻 Contributors
 
 [Hamzaul Rahman](https://github.com/Hamzaul)
 [Alavya Bajpa](https://github.com/alavyaa)
 [Adi Baria](https://github.com/ADiBariya)
 [Vishwas Panwar](https://github.com/vishwas-panwar)
 
-##🚀 Future Improvements
+## 🚀 Future Improvements
 
--Spectator mode
+- Spectator mode
 
--Ranked matchmaking
+- Ranked matchmaking
 
--Global tournaments
+- Global tournaments
 
--Replay system
+- Replay system
 
--AI coaching assistant
+- AI coaching assistant
 
--Full 3D racing engine
+- Full 3D racing engine
 
-##⭐ Support
+## ⭐ Support
 
 If you like this project, please consider giving it a ⭐ on GitHub!

@@ -261,6 +261,8 @@ Weak topics detection:
 [Alavya Bajpai](https://github.com/alavyaa)
 [Adi Bariya](https://github.com/ADiBariya)
 [Vishwas Panwar](https://github.com/vishwas-panwar)
+[Sahil Kumar](https;//github.com/sahilobroy31)
+[Shaurya Pratap Singh](https;//github.com/shauryasingh1709)
 
 ## 🚀 Future Improvements
 

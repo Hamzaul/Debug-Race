@@ -185,7 +185,7 @@ const Loader = ({ /* onLoadingComplete */ }) => { // Removed onLoadingComplete a
 
             // After zoom-out animation finishes (1500ms total transition from initial setPhase('transition'))
             setTimeout(() => {
-              navigate('/lobby'); // Navigate to Home Page
+              navigate("/home"); // Navigate to Home Page
             }, 1000); // This matches the `transition` class's CSS duration (1s) plus some buffer.
                       // Adjust as needed, but 1s for scale + opacity should be enough.
 

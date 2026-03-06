@@ -20,7 +20,7 @@ const Login = () => {
 
   try {
     await login(form);
-    navigate("/lobby");
+    navigate("/home");
   } catch (err) {
     console.log("LOGIN ERROR:", err);
     setError("ACCESS DENIED");

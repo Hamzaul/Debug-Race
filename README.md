@@ -258,7 +258,7 @@ Weak topics detection:
 ## 👨‍💻 Contributors
 
 [Hamzaul Rahman](https://github.com/Hamzaul)
-[Alavya Bajpa](https://github.com/alavyaa)
+[Alavya Bajpai](https://github.com/alavyaa)
 [Adi Baria](https://github.com/ADiBariya)
 [Vishwas Panwar](https://github.com/vishwas-panwar)
 

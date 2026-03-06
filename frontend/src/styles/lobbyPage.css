@@ -1,0 +1,215 @@
+/* PAGE */
+
+.lobby-page{
+
+min-height:100vh;
+
+display:grid;
+grid-template-columns: 1.1fr 0.9fr;
+
+background:#050505;
+
+background-image: repeating-linear-gradient(
+-45deg,
+rgba(255,165,0,0.05) 0px,
+rgba(255,165,0,0.05) 2px,
+transparent 2px,
+transparent 22px
+);
+
+color:white;
+font-family:'Orbitron',sans-serif;
+
+}
+
+
+/* BRAND PANEL */
+
+.brand-panel{
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+
+padding-left:120px;
+
+}
+
+.brand-panel h1{
+
+font-size:110px;
+
+letter-spacing:6px;
+
+background:linear-gradient(to right,#ffffff,#bfbfbf);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+
+margin-bottom:15px;
+
+}
+
+.brand-panel p{
+
+color:#ffd700;
+
+letter-spacing:5px;
+
+font-size:18px;
+
+opacity:0.9;
+
+}
+
+
+/* FORM PANEL */
+
+.form-panel{
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+}
+
+
+/* CARD */
+
+.lobby-card{
+
+width:420px;
+
+background:#0b0b0b;
+
+padding:50px;
+
+border:1px solid #2a2a2a;
+
+box-shadow:
+0 0 30px rgba(255,106,0,0.15),
+0 0 60px rgba(255,106,0,0.05);
+
+transition:0.3s;
+
+}
+
+.lobby-card:hover{
+
+border-color:#ff6a00;
+
+box-shadow:
+0 0 40px rgba(255,106,0,0.35);
+
+}
+
+
+/* TITLE */
+
+.lobby-card h2{
+
+text-align:center;
+
+color:#ff6a00;
+
+letter-spacing:3px;
+
+margin-bottom:40px;
+
+}
+
+
+/* FORM */
+
+.lobby-card form{
+
+display:flex;
+flex-direction:column;
+gap:28px;
+
+}
+
+
+/* INPUT GROUP */
+
+.input-group{
+
+display:flex;
+flex-direction:column;
+gap:10px;
+
+}
+
+.input-group label{
+
+font-size:12px;
+
+letter-spacing:2px;
+
+color:#888;
+
+}
+
+
+/* INPUTS */
+
+input,select{
+
+background:#050505;
+
+border:1px solid #333;
+
+padding:14px;
+
+color:white;
+
+font-family:'Orbitron',sans-serif;
+
+transition:0.2s;
+
+}
+
+input:focus,
+select:focus{
+
+outline:none;
+
+border-color:#ff6a00;
+
+box-shadow:0 0 8px rgba(255,106,0,0.4);
+
+}
+
+
+/* BUTTON */
+
+.create-btn{
+
+margin-top:20px;
+
+padding:18px;
+
+border:2px solid #ff6a00;
+
+background:transparent;
+
+color:#ff6a00;
+
+font-size:16px;
+
+letter-spacing:3px;
+
+cursor:pointer;
+
+transition:0.25s;
+
+}
+
+.create-btn:hover{
+
+background:#ff6a00;
+
+color:black;
+
+box-shadow:0 0 20px rgba(255,106,0,0.6);
+
+}

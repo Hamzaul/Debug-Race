@@ -1,6 +1,6 @@
 import { useAuth } from "../features/auth/features.authContext";
 import { useNavigate } from "react-router-dom";
-import "../styles/lobby.css";
+import "../styles/homePage.css";
 
 const Profile = () => {
   const { user, logout } = useAuth();
@@ -19,7 +19,7 @@ const Profile = () => {
         <div 
           className="logo"
           style={{ cursor: "pointer" }}
-          onClick={() => navigate("/lobby")}
+          onClick={() => navigate("/home")}
         >
           DEBUG RACE
         </div>

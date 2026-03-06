@@ -1,0 +1,221 @@
+.room-container{
+
+  min-height:100vh;
+
+  background:#050505;
+
+  background-image:repeating-linear-gradient(
+    -45deg,
+    rgba(255,165,0,0.03) 0px,
+    rgba(255,165,0,0.03) 2px,
+    transparent 2px,
+    transparent 20px
+  );
+
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+
+  color:white;
+  font-family:'Orbitron',sans-serif;
+
+  padding-top:80px;
+
+}
+
+
+.room-header{
+
+  text-align:center;
+  margin-bottom:80px;
+
+}
+
+.logo{
+
+  font-size:70px;
+  letter-spacing:6px;
+  color:#ff8c00;
+
+}
+
+.lobby-code{
+
+  margin-top:10px;
+  color:#ffd700;
+  letter-spacing:4px;
+  font-size:16px;
+
+}
+
+.players-grid{
+
+  display:grid;
+
+  grid-template-columns:repeat(4,260px);
+
+  gap:40px;
+
+  justify-content:center;
+
+}
+
+
+
+.player-box{
+
+  height:220px;
+
+  border:1px solid #333;
+
+  padding:20px;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+
+  background:rgba(0,0,0,0.6);
+
+  transition:0.3s;
+
+}
+
+.player-box:hover{
+
+  border-color:#ff6a00;
+
+}
+
+.leader-box{
+
+  border:2px solid #ffd700;
+  box-shadow:0 0 10px #ffd70033;
+
+}
+
+.player-name{
+
+  font-size:20px;
+  letter-spacing:2px;
+
+  display:flex;
+  align-items:center;
+  gap:6px;
+
+}
+
+.leader-icon{
+
+  color:#ffd700;
+
+}
+
+.status{
+
+  margin-top:10px;
+  font-size:14px;
+  letter-spacing:2px;
+
+}
+
+.ready{
+
+  color:#00ff7f;
+
+}
+
+.not-ready{
+
+  color:#ff4040;
+
+}
+
+.player-actions{
+
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+
+}
+
+.ready-btn{
+
+  border:1px solid #ffd700;
+  color:#ffd700;
+  background:transparent;
+
+  padding:10px;
+  cursor:pointer;
+
+  letter-spacing:2px;
+
+}
+
+.ready-btn:hover{
+
+  background:#ffd700;
+  color:black;
+
+}
+
+.leave-btn{
+
+  border:1px solid red;
+  color:red;
+  background:transparent;
+
+  padding:10px;
+  cursor:pointer;
+
+  letter-spacing:2px;
+
+}
+
+.leave-btn:hover{
+
+  background:red;
+  color:black;
+
+}
+
+.empty{
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  color:#666;
+  letter-spacing:2px;
+
+}
+
+.start-section{
+
+  margin-top:80px;
+
+}
+
+.start-btn{
+
+  border:2px solid #ff6a00;
+
+  color:#ff6a00;
+  background:transparent;
+
+  padding:18px 80px;
+
+  font-size:20px;
+  letter-spacing:3px;
+
+  cursor:pointer;
+
+  transition:0.3s;
+
+}
+
+.start-btn:hover{
+
+  background:#ff6a00;
+  color:black;
+
+}
